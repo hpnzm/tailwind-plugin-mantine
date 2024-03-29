@@ -1,0 +1,27 @@
+{
+  "name": "tailwind-plugin-mantine-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/dev",
+    "packages/tailwind-plugin-mantine"
+  ],
+  "scripts": {
+    "lint": "turbo lint",
+    "build": "turbo build",
+    "build:packages": "turbo build --filter=@hpnzm/tailwind-plugin-mantine",
+    "dev": "turbo dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm run build:packages && changeset publish"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.1"
+  },
+  "devDependencies": {
+    "husky": "^9.0.10",
+    "prettier": "^3.2.4",
+    "tsup": "^8.0.2",
+    "turbo": "^1.13.0"
+  }
+}
