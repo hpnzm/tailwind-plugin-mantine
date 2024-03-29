@@ -2,6 +2,7 @@
 
 A tailwindcss plugin to bring Mantine and Tailwind CSS together with ease.
 
+
 # Installation
 
 ```sh
@@ -29,3 +30,5 @@ const config: Config = {
 };
 export default config;
 ```
+# Credits
+This repository use [Sajarin-M](https://github.com/Sajarin-M/tailwind-plugin-mantine)'s as a starting point.
